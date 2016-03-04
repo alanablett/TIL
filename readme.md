@@ -25,7 +25,6 @@ Notes from the Magento 2 developer guide book by Branko Ajzele [http://www.packt
 ├── Controller
 ├── Helper
 ├── Model
-├── Module
 ├── README.md
 ├── Test
 ├── composer.json
@@ -57,7 +56,7 @@ Notes from the Magento 2 developer guide book by Branko Ajzele [http://www.packt
 
 `i18n` module translation CSV files.
 
-`Module` entities, resource entities, collections, and other business classes.
+`Model` entities, resource entities, collections, and other business classes.
 
 `Test` module unit tests.
 

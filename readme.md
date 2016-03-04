@@ -1,5 +1,7 @@
 # Magento 2
 
+Notes from the Magento 2 developer guide book by Branko Ajzele [http://www.packtpub.com/web-development/magento-2-developers-guide](http://www.packtpub.com/web-development/magento-2-developers-guide)
+
 ---
 
 ## General concepts
@@ -157,3 +159,15 @@ interface BlockRepositoryInterface
     public function deleteById($blockId);
 }
 ```
+
+## Code generation
+
+When certain classes are called within magento 2, they are infact fetched from the `var/generation` directory. If they do not exist in there then they are generated automatically. These are **Factory**, **Proxy** and **Interceptor** classes.
+
+**Factory** - Creates instances of other classes. Typically using the **object manager**. Business objects/logic should NOT use the the object manager.
+
+**Proxy** - A wrapper for some base class. They provide better performance by only instantiating the base class when it is needed.
+
+**Interceptor** - Related to plugins. Details to follow.
+
+In order to regenerate the code run `magento setup:di:compile` on simple sites or `magento setup:di:compile-multi-tenant` on multi site.
